@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="home-container">
+
+        <!-- Header (do Header.js) -->
+        <header class="header">
+            <div class="left-content">
+                <img class="logo-image" alt="Logo Image" src="./img/logo.png">
+
+                <!-- SearchBar (do Header.js) -->
+                <div class="search-bar">
+                    <input type="text" id="search-bar" class="search-bar-input" placeholder="Procure uma receita">
+                    <button class="search-bar-btn" id="search-btn">Procurar</button>
+                </div>
+            </div>
+
+            <!-- Avatar do Desktop (do Header.js) -->
+            <div class="rigth-content">
+                <div class="desktop-user-avatar">
+                    <!-- UserAvatar (do UserAvatar.js) -->
+                    <button class="user-avatar" id="desktop-avatar-btn">
+                        <!-- Ícone SVG substituto para FaUserCircle -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-3.87-.8-5.22-2.11C8.42 16.67 10.16 16 12 16s3.58.67 5.22 1.89C15.87 19.2 14.03 20 12 20z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Banners de Comida (do FoodBanners.js) -->
+        <div class="banners">
+            <a class="banner" href="../recipe/index1.html">
+                <img src="./img/lanches.png" alt="Lanches">
+                <h1>Lanches</h1>
+            </a>
+            <a class="banner" href="../recipe/index1.html">
+                <img src="./img/comidas.png" alt="Comidas">
+                <h1>Comidas</h1>
+            </a>
+            <a class="banner" href="../recipe/index1.html">
+                <img src="./img/pudim.png" alt="Doces">
+                <h1>Doces</h1>
+            </a>
+            <a class="banner" href="../recipe/index1.html">
+                <img src="./img/chas.png" alt="Bebidas">
+                <h1>Bebidas</h1>
+            </a>
+            <a class="banner" href="../recipe/index1.html">
+                <img src="./img/bolos.png" alt="Bolos">
+                <h1>Bolos</h1>
+            </a>
+        </div>
+
+        <!-- Banner Surpresa (do Home.js) -->
+        <div class="surprise-banner-container">
+            <a href="../recipe/index1.html" class="banner surprise-banner">
+                <img src="./img/chef-blur.png" alt="Surpreenda-se">
+                <h1>Surpreenda-se</h1>
+            </a>
+        </div>
+
+        <!-- Avatar Mobile (do Home.js) -->
+        <div class="mobile-user-avatar">
+            <!-- UserAvatar (do UserAvatar.js) -->
+            <button class="user-avatar" id="mobile-avatar-btn">
+                <!-- Ícone SVG substituto para FaUserCircle -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-3.87-.8-5.22-2.11C8.42 16.67 10.16 16 12 16s3.58.67 5.22 1.89C15.87 19.2 14.03 20 12 20z" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Modal de Opções do Usuário (do Home.js, recriado) -->
+        <div id="user-options-modal" class="user-options-modal">
+            <h2>Opções (Chefe)</h2>
+            <ul>
+                <li>Meu Perfil</li>
+                <li>Minhas Receitas</li>
+                <li>Sair</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

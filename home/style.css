@@ -1,0 +1,543 @@
+:root {
+    --primary-color: #f77f00;
+    --primary-hover-color: #FBAD5B;
+    --secondary-color: #2A8B8F;
+    --secondary-hover-color: #67C4C8;
+    --header-color: #F1D0B0;
+    --background-color: #FAF3E0;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--background-color);
+}
+
+/* --- Estilos de Home.css --- */
+.home-container {
+    background-color: var(--background-color);
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    /* Alinha o conteúdo no topo, permite que o grid cresça */
+    align-content: start;
+}
+
+.home-container .text-wrapper {
+    color: #2b2520f5;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    width: 70%;
+    justify-self: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.surprise-banner-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    .mobile-user-avatar {
+        display: none;
+    }
+}
+
+/* --- Estilos de Header.css --- */
+.header {
+    background-color: var(--header-color);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    box-shadow: 2px 0 10px 5px rgba(0, 0, 0, 0.252);
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    /* Garante que o padding não quebre o layout */
+}
+
+.logo-image {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.left-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar {
+    max-width: none;
+    height: 30px;
+    width: 90%;
+    display: flex;
+    align-content: center;
+}
+
+.search-bar-input {
+    width: 50%;
+    border-radius: 50px 0 0 50px;
+    border: none;
+    padding: 0 15px;
+    font-size: 12px;
+}
+
+.search-bar-input:focus {
+    outline: 1px solid var(--primary-color);
+}
+
+.search-bar-btn {
+    outline: 1px solid var(--primary-color);
+    border-radius: 0 50px 50px 0;
+    border: none;
+    width: 25%;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.search-bar-btn:hover {
+    background-color: var(--primary-hover-color);
+    outline: 1px solid var(--primary-hover-color);
+}
+
+.search-bar-btn:focus {
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+.desktop-user-avatar {
+    display: none;
+    /* Oculto por padrão, ativado em media query */
+}
+
+@media (min-width: 768px) {
+    .header {
+        flex-wrap: nowrap;
+        padding: 10px 20px;
+        gap: 20px;
+    }
+
+    .left-content {
+        width: auto;
+        flex-grow: 1;
+        gap: 20px;
+    }
+
+    .logo-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .search-bar {
+        width: 100%;
+        max-width: 600px;
+        height: 42px;
+    }
+
+    .search-bar-input {
+        padding: 0 20px;
+        font-size: 14px;
+    }
+
+    .search-bar-btn {
+        font-size: 14px;
+        width: 150px;
+        /* Largura fixa para "Procurar" */
+    }
+}
+
+@media (min-width: 1024px) {
+    .logo-image {
+        width: 75px;
+        height: 75px;
+    }
+
+    .search-bar {
+        max-width: 60%;
+    }
+
+    .search-bar-btn {
+        width: 25%;
+        /* Retorna ao percentual no desktop maior */
+    }
+
+    .desktop-user-avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        /* width: 50px;
+        height: 50px; */
+        border-radius: 50%;
+    }
+}
+
+/* --- Estilos de UserAvatar.css --- */
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: transparent;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.user-avatar svg {
+    width: 100%;
+    height: 100%;
+    color: var(--secondary-color);
+}
+
+.user-avatar:hover svg {
+    color: var(--secondary-hover-color);
+}
+
+@media (min-width: 1024px) {
+    .user-avatar {
+        position: inherit;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* --- Estilos de FoodBanners.css --- */
+.banners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* Reduzido de 40px para melhor encaixe */
+    padding: 20px;
+    /* Adiciona espaçamento */
+}
+
+.banner {
+    position: relative;
+    width: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.banner:hover::after,
+.banner:hover h1 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    /* Garante que a imagem cubra o banner */
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(59, 58, 58, 0.106);
+    border-radius: 16px;
+    backdrop-filter: blur(3px);
+    border-radius: 12px;
+    -webkit-backdrop-filter: blur(8.3px);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.surprise-banner {
+    width: 200px;
+    height: 120px;
+    margin: 30px 0;
+}
+
+.surprise-banner h1 {
+    font-size: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .surprise-banner {
+        width: 60%;
+        height: 300px;
+        margin: 30px 0;
+    }
+
+    .surprise-banner h1 {
+        font-size: 3rem;
+    }
+}
+
+/* --- Estilos para UserOptionsModal (Não fornecido, criado agora) --- */
+.user-options-modal {
+    display: none;
+    /* Controlado por JS */
+    position: fixed;
+    bottom: 70px;
+    /* Acima do ícone de avatar mobile */
+    right: 10px;
+    width: 200px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ddd;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.user-options-modal h2 {
+    font-size: 1rem;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.user-options-modal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.user-options-modal li {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.user-options-modal li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Ajuste do modal para desktop */
+@media (min-width: 1024px) {
+    .user-options-modal {
+        bottom: auto;
+        /* Desanexa do 'bottom' */
+        top: 80px;
+        /* Abaixo do header */
+        right: 20px;
+    }
+}
+
+.rigth-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.criar-receita {
+    background-color: var(--primary-color);
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 12px;
+    width: 130px;
+    text-align: center;
+}
+
+.criar-receita:hover {
+    background-color: var(--primary-hover-color);
+}
+
+
+/* =================================================================== */
+/* --- NOVOS ESTILOS PARA RESPONSIVIDADE (style.css) --- */
+/* =================================================================== */
+
+/* --- Estilos Gerais da Página --- */
+
+/* Adiciona a classe de acessibilidade que faltava */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.title {
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 0;
+}
+
+.centered {
+    text-align: center;
+}
+
+.p {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* --- Layout Principal (Mobile-First) --- */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    /* Empilha os itens verticalmente (mobile) */
+    align-items: center;
+    /* Centraliza o conteúdo */
+    padding: 20px;
+    gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.recipe-article,
+.recipe-sidebar {
+    width: 100%;
+    max-width: 700px;
+    /* Limite de largura para leitura */
+    box-sizing: border-box;
+}
+
+/* --- Cabeçalho da Receita --- */
+.recipe-header {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite quebrar a linha em telas pequenas */
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.recipe-header .title {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+    /* Evita que o rating encolha */
+}
+
+.rating .star {
+    width: 24px;
+    height: 24px;
+    fill: var(--primary-color);
+}
+
+.rating .text-wrapper-3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* --- Imagem da Receita --- */
+.rectangle {
+    width: 100%;
+    height: 300px;
+    background-color: #e0e0e0;
+    /* Cor de placeholder */
+    border-radius: 8px;
+    margin: 0 0 20px 0;
+    background-image: url('./img/placeholder.jpg');
+    /* Adicione uma imagem real aqui */
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- Barra Lateral (Ingredientes / Preparo) --- */
+.recipe-sidebar {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-sidebar .line {
+    display: none;
+    /* Oculta a linha no mobile (não faz sentido) */
+}
+
+.recipe-sidebar .title {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.lorem-lorem-lorem {
+    padding-left: 20px;
+}
+
+.lorem-lorem-lorem li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+
+/* --- Media Query para Desktop (Telas Maiores) --- */
+@media (min-width: 1024px) {
+    .main-content {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 40px;
+        gap: 40px;
+    }
+
+    .recipe-article {
+        flex: 2;
+        /* Ocupa 2/3 do espaço */
+        max-width: 800px;
+    }
+
+    .recipe-sidebar {
+        flex: 1;
+        /* Ocupa 1/3 do espaço */
+        max-width: 400px;
+        position: sticky;
+        /* Efeito "grudento" ao rolar a página */
+        top: 20px;
+        /* Distância do topo */
+    }
+
+    .recipe-sidebar .line {
+        display: block;
+        /* Mostra a linha no desktop */
+        width: 100%;
+        margin-bottom: 20px;
+        opacity: 0.5;
+    }
+}

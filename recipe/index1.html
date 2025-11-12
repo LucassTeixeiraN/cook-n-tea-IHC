@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Nome da receita - Cook n' Tea</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <header class="header">
+            <div class="left-content">
+              <a href="../home/home.html">
+                <img class="logo-image" alt="Logo Image" src="./img/logo.png">
+              </a>
+
+                <!-- SearchBar (do Header.js) -->
+                <div class="search-bar">
+                    <input type="text" id="search-bar" class="search-bar-input" placeholder="Procure uma receita">
+                    <button class="search-bar-btn" id="search-btn">Procurar</button>
+                </div>
+            </div>
+
+            <!-- Avatar do Desktop (do Header.js) -->
+            <div class="rigth-content">
+                <div class="desktop-user-avatar">
+                    <!-- UserAvatar (do UserAvatar.js) -->
+                    <button class="user-avatar" id="desktop-avatar-btn">
+                        <!-- Ícone SVG substituto para FaUserCircle -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-3.87-.8-5.22-2.11C8.42 16.67 10.16 16 12 16s3.58.67 5.22 1.89C15.87 19.2 14.03 20 12 20z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+      <main class="main-content">
+        <article class="recipe-article">
+          <header class="recipe-header">
+            <h1 class="text-wrapper-2 title">Nome da receita</h1>
+            <div class="rating" role="img" aria-label="Avaliação: 5 de 5 estrelas">
+              <svg class="star" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="var(--secondary-color)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#231F20" d="M63.893,24.277c-0.238-0.711-0.854-1.229-1.595-1.343l-19.674-3.006L33.809,1.15 C33.479,0.448,32.773,0,31.998,0s-1.48,0.448-1.811,1.15l-8.815,18.778L1.698,22.935c-0.741,0.113-1.356,0.632-1.595,1.343 c-0.238,0.71-0.059,1.494,0.465,2.031l14.294,14.657L11.484,61.67c-0.124,0.756,0.195,1.517,0.822,1.957 c0.344,0.243,0.747,0.366,1.151,0.366c0.332,0,0.666-0.084,0.968-0.25l17.572-9.719l17.572,9.719c0.302,0.166,0.636,0.25,0.968,0.25 c0.404,0,0.808-0.123,1.151-0.366c0.627-0.44,0.946-1.201,0.822-1.957l-3.378-20.704l14.294-14.657 C63.951,25.771,64.131,24.987,63.893,24.277z"></path> </g></svg>
+              <span class="text-wrapper-3" aria-hidden="true">5/5</span>
+            </div>
+          </header>
+          <figure class="rectangle" role="img" aria-label="Imagem da receita">
+            <span class="visually-hidden">Imagem ilustrativa da receita</span>
+          </figure>
+          <section class="recipe-description">
+            <h2 class="visually-hidden title">Descrição da receita</h2>
+            <p class="p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fermentum nulla vitae turpis pellentesque,
+              nec pretium urna congue. Nam malesuada odio sed aliquam aliquam. Vivamus pulvinar volutpat ipsum, eu
+              vulputate mi hendrerit eget. Sed aliquet leo ac quam volutpat consectetur. Aenean sit amet est vitae enim
+              bibendum cursus. Donec vestibulum orci at neque luctus semper. Sed dignissim vel lorem sit amet porttitor.
+              Sed lacinia tincidunt lorem ac semper. Maecenas vulputate libero metus, nec aliquet ipsum ornare id.<br />Morbi
+              id dignissim dolor. Cras ut purus venenatis, viverra lectus quis, porta lectus. Nulla lacinia euismod
+              maximus. Suspendisse ac sem at tellus condimentum convallis nec et turpis. Maecenas id leo dictum libero
+              auctor vulputate et vel leo. Mauris justo sapien, faucibus in nunc nec, pulvinar interdum mauris. Etiam et
+              accumsan metus. Sed fringilla, massa in aliquam ultrices, massa erat commodo mauris, eu interdum nisi leo
+              id leo. Mauris ultricies vestibulum laoreet. Nulla sit amet diam porttitor, viverra augue non, mollis
+              nulla. Etiam pretium scelerisque libero venenatis cursus. Donec porta consequat consequat.
+            </p>
+          </section>
+        </article>
+        <aside class="recipe-sidebar">
+          <img class="line" src="img/line-1.svg" alt="" role="presentation" />
+          <section class="ingredients-section">
+            <h2 class="text-wrapper title centered">Ingredientes</h2>
+            <ul class="lorem-lorem-lorem">
+              <li>Lorem</li>
+              <li>Lorem</li>
+              <li>Lorem</li>
+              <li>Lorem</li>
+            </ul>
+          </section>
+          <section class="preparation-section">
+            <h2 class="div title centered">Modo de preparo</h2>
+            <p class="lorem-ipsum-dolor">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fermentum nulla vitae turpis pellentesque,
+              nec pretium urna congue. Nam malesuada odio sed aliquam aliquam. Vivamus pulvinar volutpat ipsum, eu
+              vulputate mi hendrerit eget. Sed aliquet leo ac quam volutpat consectetur. Aenean sit amet est vitae enim
+              bibendum cursus. Donec vestibulum orci at neque luctus semper. Sed dignissim vel lorem sit amet porttitor.
+              Sed lacinia tincidunt lorem ac semper. Maecenas vulputate libero metus, nec aliquet ipsum ornare id.<br />Morbi
+              id dignissim dolor. Cras ut purus venenatis, viverra lectus quis, porta lectus. Nulla lacinia euismod
+              maximus. Suspendisse ac sem at tellus condimentum convallis nec et turpis. Maecenas id leo dictum libero
+              auctor vulputate et vel leo. Mauris justo sapien, faucibus in nunc nec, pulvinar interdum mauris. Etiam et
+              accumsan metus. Sed fringilla, massa in aliquam ultrices, massa erat commodo mauris, eu interdum nisi leo
+              id leo. Mauris ultricies vestibulum laoreet. Nulla sit amet diam porttitor, viverra augue non, mollis
+              nulla. Etiam pretium scelerisque libero venenatis cursus. Donec porta consequat consequat.
+            </p>
+          </section>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>
