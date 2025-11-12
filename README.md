@@ -25,10 +25,10 @@ Sendo um projeto estático (front-end puro), não há necessidade de instalaçã
 
 1.  Clone este repositório:
     ```bash
-    git clone [[https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git](https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git)](https://github.com/LucassTeixeiraN/cook-n-tea-IHC.git)
+    git clone https://github.com/LucassTeixeiraN/cook-n-tea-IHC.git
     ```
 2.  Navegue até a pasta do projeto.
-3.  Abra o arquivo `index.html` da pasta landing page no seu navegador de preferência.
+3.  Abra o arquivo `index.html` da  pasta `landing page` no seu navegador de preferência.
 
 ## 👥 Autores
 
