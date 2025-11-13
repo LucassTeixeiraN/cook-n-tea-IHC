@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #f77f00;
-    --primary-hover-color: #FBAD5B;
-    --secondary-color: #2A8B8F;
-    --secondary-hover-color: #67C4C8;
-    --header-color: #F1D0B0;
-    --background-color: #FAF3E0;
+  --primary-color: #f77f00;
+  --primary-hover-color: #FBAD5B;
+  --secondary-color: #2A8B8F;
+  --secondary-hover-color: #67C4C8;
+  --header-color: #F1D0B0;
+  --background-color: #FAF3E0;
 }
 
 body {
@@ -17,85 +17,129 @@ body {
 }
 
 .header {
-    background-color: var(--header-color);
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-    box-shadow: 2px 0 10px 5px rgba(0, 0, 0, 0.252);
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    /* Garante que o padding não quebre o layout */
+  background-color: var(--header-color);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px 5px rgba(0, 0, 0, 0.252);
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  /* Garante que o padding não quebre o layout */
 }
 
 .logo-image {
-    width: 50px;
-    height: 50px;
-    flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
 }
 
 .left-content {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
 }
 
 .search-bar {
-    max-width: none;
-    height: 30px;
-    width: 90%;
-    display: flex;
-    align-content: center;
+  max-width: none;
+  height: 30px;
+  width: 90%;
+  display: flex;
+  align-content: center;
 }
 
 .search-bar-input {
-    width: 50%;
-    border-radius: 50px 0 0 50px;
-    border: none;
-    padding: 0 15px;
-    font-size: 12px;
+  width: 50%;
+  border-radius: 50px 0 0 50px;
+  border: none;
+  padding: 0 15px;
+  font-size: 12px;
+}
+
+@media (max-width: 1400px) {
+  .search-bar-input {
+    width: 100%;
+  }
 }
 
 .search-bar-input:focus {
-    outline: 1px solid var(--primary-color);
+  outline: 1px solid var(--primary-color);
 }
 
 .search-bar-btn {
-    outline: 1px solid var(--primary-color);
-    border-radius: 0 50px 50px 0;
-    border: none;
-    width: 25%;
-    background-color: var(--primary-color);
-    color: #fff;
-    font-weight: bold;
-    font-size: 12px;
-    cursor: pointer;
+  outline: 1px solid var(--primary-color);
+  border-radius: 0 50px 50px 0;
+  border: none;
+  width: 25%;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 .search-bar-btn:hover {
-    background-color: var(--primary-hover-color);
-    outline: 1px solid var(--primary-hover-color);
+  background-color: var(--primary-hover-color);
+  outline: 1px solid var(--primary-hover-color);
 }
 
 .search-bar-btn:focus {
-    background-color: #fff;
-    color: var(--primary-color);
+  background-color: #fff;
+  color: var(--primary-color);
 }
 
 .desktop-user-avatar {
-    display: none;
-    /* Oculto por padrão, ativado em media query */
+  display: none;
+  /* Oculto por padrão, ativado em media query */
 }
+
+@media (min-width: 768px) {
+  .header {
+    flex-wrap: nowrap;
+    padding: 10px 20px;
+    gap: 20px;
+  }
+
+  .left-content {
+    width: auto;
+    flex-grow: 1;
+    gap: 20px;
+  }
+
+  .logo-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 600px;
+    height: 42px;
+  }
+
+  .search-bar-input {
+    padding: 0 20px;
+    font-size: 14px;
+  }
+
+  .search-bar-btn {
+    font-size: 14px;
+    width: 150px;
+    /* Largura fixa para "Procurar" */
+  }
+}
+
 .image {
   width: 75.93px;
   height: 77.01px;
   aspect-ratio: 0.99;
 }
+
 .user {
   position: absolute;
-  right: 15px; 
+  right: 15px;
   width: 87px;
   height: 87px;
 }
@@ -105,6 +149,12 @@ body {
   padding: 40px 160px;
   box-sizing: border-box;
   display: flex;
+}
+
+@media (max-width: 1350px) {
+  .main-content {
+    padding: 40px;
+  }
 }
 
 .recipe-article {
@@ -117,6 +167,34 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.recipe-description {
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.recipe-sidebar {
+  border-left: 1px solid #f7800088;
+  width: 40%;
+  padding-left: 30px;
+}
+
+@media (max-width: 700px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .recipe-article {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .recipe-sidebar {
+    border: none;
+    width: 100%;
+    padding-left: 0;
+  }
 }
 
 .text-wrapper-2 {
@@ -147,11 +225,6 @@ body {
   background-color: #f1d0b0;
 }
 
-.recipe-description {
-  margin-top: 20px;
-  text-align: justify;
-}
-
 .p,
 .lorem-ipsum-dolor {
   font-family: "Poppins-SemiBold", Helvetica;
@@ -161,13 +234,7 @@ body {
   line-height: 1.6;
 }
 
-.recipe-sidebar {
-  border-left: 1px solid #f7800088;
-  width: 35%;
-  padding-left: 30px;
-}
-
-.ingredients-section{
+.ingredients-section {
   margin-top: 25px;
   margin-bottom: 100px;
 }
@@ -222,23 +289,38 @@ li::marker {
   white-space: nowrap;
   width: 1px;
 }
+
 .star {
   width: 20px;
   height: 20px;
 }
 
-.star path{
+.star path {
   fill: var(--secondary-color);
   fill: var(--secondary-color);
 }
 
+.user-avatar {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: transparent;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
 @media (min-width: 1024px) {
-    .user-avatar {
-        position: inherit;
-        /* Remove o 'fixed' no desktop */
-        width: 50px;
-        height: 50px;
-    }
+  .user-avatar {
+    position: inherit;
+    /* Remove o 'fixed' no desktop */
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .user-avatar {
@@ -260,62 +342,26 @@ li::marker {
 
 @media (min-width: 1024px) {
   .logo-image {
-      width: 75px;
-      height: 75px;
+    width: 75px;
+    height: 75px;
   }
 
   .search-bar {
-      max-width: 60%;
+    max-width: 60%;
   }
 
   .search-bar-btn {
-      width: 25%;
-      /* Retorna ao percentual no desktop maior */
+    width: 25%;
+    /* Retorna ao percentual no desktop maior */
   }
 
   .desktop-user-avatar {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      /* width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    /* width: 50px;
       height: 50px; */
-      border-radius: 50%;
+    border-radius: 50%;
   }
-}
-
-@media (min-width: 768px) {
-    .header {
-        flex-wrap: nowrap;
-        padding: 10px 20px;
-        gap: 20px;
-    }
-
-    .left-content {
-        width: auto;
-        flex-grow: 1;
-        gap: 20px;
-    }
-
-    .logo-image {
-        width: 60px;
-        height: 60px;
-    }
-
-    .search-bar {
-        width: 100%;
-        max-width: 600px;
-        height: 42px;
-    }
-
-    .search-bar-input {
-        padding: 0 20px;
-        font-size: 14px;
-    }
-
-    .search-bar-btn {
-        font-size: 14px;
-        width: 150px;
-        /* Largura fixa para "Procurar" */
-    }
 }

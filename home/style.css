@@ -90,6 +90,12 @@ body {
     font-size: 12px;
 }
 
+@media (max-width: 1400px) {
+    .search-bar-input {
+        width: 100%;
+    }
+}
+
 .search-bar-input:focus {
     outline: 1px solid var(--primary-color);
 }
@@ -236,6 +242,12 @@ body {
     cursor: pointer;
 }
 
+@media (max-width: 429px) {
+    .banner {
+        width: 100%;
+    }
+}
+
 .banner:hover::after,
 .banner:hover h1 {
     opacity: 0;
@@ -281,7 +293,7 @@ body {
 }
 
 .surprise-banner {
-    width: 200px;
+    width: 100%;
     height: 120px;
     margin: 30px 0;
 }
@@ -290,11 +302,16 @@ body {
     font-size: 1.5rem;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1080px) {
     .surprise-banner {
-        width: 60%;
+        margin: 0 20px;
+    }
+}
+
+@media (min-width: 430px) {
+    .surprise-banner {
+        max-width: 1080px;
         height: 300px;
-        margin: 30px 0;
     }
 
     .surprise-banner h1 {
